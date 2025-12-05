@@ -1,93 +1,58 @@
-Declarative Programming Project – Gerrymandering (ASP + Python)
-================================================================
+# Declarative Programming Project – Gerrymandering (ASP + Python)
 
-This project demonstrates the use of Answer Set Programming (ASP) to model and analyze gerrymandering strategies in grid-based electoral systems. The objective is to partition a voting region (represented as a 2D grid) into a fixed number of contiguous districts to maximize the number of seats won by a given political party.
+![University](https://img.shields.io/badge/University-University%20of%20Parma-blue)
+![Course](https://img.shields.io/badge/Course-Declarative%20Programming-orange)
+![Language](https://img.shields.io/badge/Language-ASP%20%2F%20Python-green)
+![Solver](https://img.shields.io/badge/Solver-Clingo-red)
 
-------------------------------------------------------------
-Project Structure
-------------------------------------------------------------
+This project demonstrates the use of **Answer Set Programming (ASP)** to model and analyze **gerrymandering strategies** in grid-based electoral systems. 
 
-The zip archive contains the following main components:
+The objective is to partition a voting region (represented as a 2D grid) into a fixed number of contiguous districts to **maximize the number of seats won** by a given political party.
 
-- `benchmarks/` — 100 benchmark instances in ASP format (`.lp`)
-- `imgs/` — Graphical results used in the report
-- `report/` — PDF reports (English and Italian versions)
-- `test/` — Utility scripts for vote counting and debugging
-- `generate_benchmarks.py` — Python script to generate benchmark instances
-- `political_districting.lp` — Main ASP encoding for the districting problem
-- `run_experiments_python.py` — Python script to solve all benchmarks using Clingo
-- `results_python.csv` — Output file with all experiment results
-- `extra\` -  Notebook of the DP course
-  
-------------------------------------------------------------
-Getting Started
-------------------------------------------------------------
+---
 
-Requirements:
-- Python 3.8 or higher
-- Clingo 5.7.1 or later (must be available in the system PATH)
+## 📂 Repository Structure
 
-Install Clingo:
-pip install clingo
+The repository contains the following main components:
 
-1. Run All Experiments:
-------------------------
-To execute the main solver on all benchmark files:
-python run_experiments_python.py
+- **`benchmarks/`** Contains 100 benchmark instances in ASP format (`.lp`).
 
-This script will:
-- Run Clingo for both Party 0 and Party 1
-- Enforce a timeout of 300 seconds per run
-- Save all output results in results_python.csv
+- **`imgs/`** Graphical results, plots, and heatmaps used in the report.
 
-2. Generate New Benchmark Instances:
-------------------------------------
-To generate a new set of randomized benchmark instances:
-python generate_benchmarks.py
+- **`report/`** PDF reports containing theoretical background and experimental analysis (English and Italian versions).
 
-This will:
-- Generate randomized grid configurations with party votes
-- Save the new .lp files in the benchmarks/ folder
+- **`test/`** Utility scripts for vote counting (`count_voters.py`) and debugging (`debug_districting.lp`).
 
-------------------------------------------------------------
-Utilities
-------------------------------------------------------------
+- **`extra/`** Notebooks and study notes from the Declarative Programming course.
 
-- test/count_voters.py: Count votes per party in each .lp instance
-- test/debug_districting.lp: Simplified ASP encoding for debugging connectivity
-- votes_summary.csv: Summary output from the vote counter script
+- **`political_districting.lp`** The main ASP encoding for the districting problem.
 
-------------------------------------------------------------
-Reports
-------------------------------------------------------------
+- **`generate_benchmarks.py`** Python script used to generate randomized benchmark instances.
 
-Theoretical background, model structure, and experimental analysis are provided in:
+- **`run_experiments_python.py`** Python script orchestrating the solver using Clingo.
 
-- report/GerrymanderingENG.pdf – English version
-- report/GerrymanderingITV.pdf – Italian version
+- **`results_python.csv`** Output file collecting all experiment results.
 
-------------------------------------------------------------
-Visualizations
-------------------------------------------------------------
+---
 
-All report images (plots, heatmaps, examples) are stored in the imgs/ folder.
+## 📄 Reports & Documentation
 
-------------------------------------------------------------
-Extra Files
-------------------------------------------------------------
+Theoretical background, model structure, and experimental analysis are detailed in the project reports:
 
-This repository includes two PDF files with study notes used to support project development.
+- 🇬🇧 [**report/GerrymanderingENG.pdf**](report/GerrymanderingENG.pdf) – English version
+- 🇮🇹 [**report/GerrymanderingITV.pdf**](report/GerrymanderingITV.pdf) – Italian version
 
-------------------------------------------------------------
-Contacts
-------------------------------------------------------------
+---
 
-For inquiries or feedback:
-- aurora.felisari@studenti.unipr.it
-- claudio.bendini@studenti.unipr.it
+## 👥 Contacts
 
-------------------------------------------------------------
-Project Context
-------------------------------------------------------------
+For inquiries or feedback regarding this project:
 
-This work was developed as part of the Declarative Programming course to explore logic-based modeling and optimization using ASP and Python.
+* **Aurora Felisari** - [aurora.felisari@studenti.unipr.it](mailto:aurora.felisari@studenti.unipr.it)
+* **Claudio Bendini** - [claudio.bendini@studenti.unipr.it](mailto:claudio.bendini@studenti.unipr.it)
+
+---
+
+## 🎓 Project Context
+
+This work was developed as part of the **Declarative Programming** course at the **University of Parma** to explore logic-based modeling and optimization using ASP and Python.
